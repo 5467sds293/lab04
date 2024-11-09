@@ -1,0 +1,19 @@
+def fibonacci_sequence(n):
+    """
+
+    :param n: Максимальне число в послідовності
+    :return: Список чисел Фібоначчі
+    """
+    fib_sequence = []
+    a, b = 0, 1
+    
+    while a <= n:
+        fib_sequence.append(a)
+        a, b = b, a + b  # Генерація наступного числа Фібоначчі
+
+    return fib_sequence
+
+n = int(input("Введіть максимальне число для генерації послідовності Фібоначчі: "))
+
+result = fibonacci_sequence(n)
+print(f"Числа Фібоначчі до {n}: {result}")
